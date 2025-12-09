@@ -4,3 +4,34 @@ cc_library(
     include_prefix = "utils",
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "midas_utils",
+    hdrs = ["midas_utils.hpp"],
+    include_prefix = "utils",
+    deps = [
+        "@libtorch//:torch",  # propagate LibTorch headers to anyone including this
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "IMU_server",
+    hdrs = ["IMU_server.hpp"],
+    include_prefix = "utils",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "Imu_tracker",
+    hdrs = ["Imu_tracker.hpp"],
+    include_prefix = "utils",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "apriltag_utils",
+    hdrs = ["apriltag_utils.hpp"],
+    include_prefix = "utils",
+    visibility = ["//visibility:public"],
+)

@@ -17,3 +17,5 @@ build --host_copt=-I/usr/include/opencv4
 
 # Optional: quiet warnings
 build --copt=-w
+
+run --run_under="env LD_LIBRARY_PATH=/home/abhinand/Bionex-lab/Torso-Stabilization-Cpp/third_party/libtorch/lib:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"

@@ -1,0 +1,5 @@
+filegroup(
+    name = "dpt_swin2_tiny_256_torchscript",
+    srcs = ["dpt_swin2_tiny_256_torchscript.pt"],
+    visibility = ["//visibility:public"],
+)

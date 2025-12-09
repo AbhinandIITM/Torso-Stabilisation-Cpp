@@ -1,0 +1,2 @@
+bazel run //src/tests:midas_test
+bazel build //src/tests:midas_test

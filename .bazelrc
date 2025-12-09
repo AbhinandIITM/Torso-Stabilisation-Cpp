@@ -130,3 +130,4 @@ try-import %workspace%/.configure.bazelrc
 
 # This bazelrc file can be used for user-specific custom build settings.
 try-import %workspace%/.user.bazelrc
+

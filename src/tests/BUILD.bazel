@@ -1,0 +1,28 @@
+cc_binary(
+    name = "mp_test",
+    srcs = ["mp_test.cpp"],
+    deps = [
+        "//src/utils:mp_utils",
+    ],
+)
+cc_binary(
+    name = "midas_test",
+    srcs = ["midas_test.cpp"],
+    deps = [
+        "//src/utils:midas_utils",
+        "@linux_opencv//:opencv",
+        "@bazel_tools//tools/cpp/runfiles", 
+    ],
+    data = [
+        "//src/models:dpt_swin2_tiny_256_torchscript",  # <- add this
+    ],
+)
+
+
+cc_binary(
+    name = "imu_test",
+    srcs = ["imu_test.cpp"],
+    deps = [
+        "//src/utils:mp_utils",
+    ],
+)
