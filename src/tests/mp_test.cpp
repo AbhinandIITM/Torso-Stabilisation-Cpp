@@ -8,10 +8,8 @@
 
 int main() {
   // ---------- Initialize MediaPipe hand landmarker ----------
-  utils::HandLandmarkerMP hand_mp(
-      "mediapipe/models/hand_landmarker.task",
-      /*max_num_hands=*/2);
-
+  utils::HandLandmarkerMP hand_mp;
+  //utils::HandLandmarkerMP hand_mp("some/other/path.task", 2);
   // ---------- Open camera ----------
   cv::VideoCapture cap(0);
   if (!cap.isOpened()) {

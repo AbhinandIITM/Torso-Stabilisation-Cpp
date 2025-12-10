@@ -19,7 +19,7 @@ using HandLandmarks = std::map<int, std::vector<HandPoint>>;
 
 class HandLandmarkerMP {
  public:
-  explicit HandLandmarkerMP(const std::string& model_path,
+  explicit HandLandmarkerMP(const std::string& model_path= "mediapipe/models/hand_landmarker.task",
                             int max_num_hands = 2);
   ~HandLandmarkerMP();
 

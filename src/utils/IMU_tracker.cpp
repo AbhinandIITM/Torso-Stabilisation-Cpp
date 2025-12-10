@@ -1,4 +1,4 @@
-#include "scripts/include/utils/IMUTracker.hpp"
+#include "utils/IMU_tracker.hpp"
 
 IMUTracker::IMUTracker(size_t buffer_size)
     : position(Eigen::Vector3d::Zero()),

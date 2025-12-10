@@ -3,7 +3,10 @@ cc_binary(
     srcs = ["mp_test.cpp"],
     deps = [
         "//src/utils:mp_utils",
+        "@bazel_tools//tools/cpp/runfiles", 
     ],
+    
+    
 )
 cc_binary(
     name = "midas_test",
@@ -18,11 +21,15 @@ cc_binary(
     ],
 )
 
-
 cc_binary(
     name = "imu_test",
     srcs = ["imu_test.cpp"],
     deps = [
-        "//src/utils:mp_utils",
+        "//src/utils:imu_server",      # Needs websocketpp + asio
+        "//src/utils:imu_tracker",     # Needs Eigen
+        "@com_google_absl//absl/log",
+        "@com_github_nlohmann_json//:json",
+        "@eigen//:eigen3",              # Correct: eigen3, not eigen
     ],
+    copts = ["-std=c++17"], 
 )

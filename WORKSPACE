@@ -726,3 +726,22 @@ new_local_repository(
     path = "third_party/libtorch",
     build_file = "@//third_party:libtorch.BUILD",
 )
+# Boost.Beast WebSocket (modern replacement for websocketpp)
+http_archive(
+    name = "com_github_nelhage_rules_boost",
+    sha256 = "5ea00abc70cdf396a23fb53201db19ebce2837d28887a08544429d27783309ed",
+    strip_prefix = "rules_boost-96e9b631f104b43a53c21c87b01ac538ad6f3b48",
+    urls = ["https://github.com/nelhage/rules_boost/archive/96e9b631f104b43a53c21c87b01ac538ad6f3b48.tar.gz"],
+)
+
+load("@com_github_nelhage_rules_boost//:boost/boost.bzl", "boost_deps")
+boost_deps()
+
+# ASIO 1.24.0 (latest)
+http_archive(
+    name = "com_github_chriskohlhoff_asio",
+    sha256 = "cbcaaba0f66722787b1a7c33afe1befb3a012b5af3ad7da7ff0f6b8c9b7a8a5b",
+    strip_prefix = "asio-asio-1-24-0",
+    urls = ["https://github.com/chriskohlhoff/asio/archive/asio-1-24-0.tar.gz"],
+    build_file = "@//third_party:asio.BUILD",
+)

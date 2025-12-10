@@ -23,10 +23,11 @@ cc_library(
 )
 
 cc_library(
-    name = "Imu_tracker",
-    hdrs = ["Imu_tracker.hpp"],
+    name = "IMU_tracker",
+    hdrs = ["IMU_tracker.hpp"],
     include_prefix = "utils",
     visibility = ["//visibility:public"],
+    deps = ["@eigen//:eigen3"],
 )
 
 cc_library(
@@ -34,4 +35,5 @@ cc_library(
     hdrs = ["apriltag_utils.hpp"],
     include_prefix = "utils",
     visibility = ["//visibility:public"],
+    deps = ["@eigen//:eigen3"],
 )

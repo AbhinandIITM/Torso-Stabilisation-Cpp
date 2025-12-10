@@ -11,7 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+exports_files([
+    "hand_landmarker.task",
+])
+# ------------------------
 load(
     "//mediapipe/framework/tool:mediapipe_files.bzl",
     "mediapipe_files",
